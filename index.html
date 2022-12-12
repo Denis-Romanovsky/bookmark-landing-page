@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preload" as="image" href="/images/illustration-features-tab-1.svg">
+    <link rel="preload" as="image" href="/images/illustration-features-tab-2.svg">
+    <link rel="preload" as="image" href="/images/illustration-features-tab-3.svg">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container" data-priority="secondary">
+        <nav class="site-nav">
+          <a class="site-nav__logo" data-color="default">
+            <svg class="icon" height="25" width="148">
+              <use href="images/logo-bookmark.svg#logo-bookmark"></use>
+            </svg>
+          </a>
+          <button
+            class="menu-toggle"
+            aria-label="Menu"
+            aria-controls="site-nav__primary"
+            aria-expanded="false"
+          >
+            <span class="hamburger" aria-hidden="true"></span>
+          </button>
+          <!-- <div class="nav-wrapper"> -->
+          <ul class="site-nav__primary" data-state="closed">
+            <li class="site-nav__item">
+              <a href="#" class="site-nav__link">Features</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="#" class="site-nav__link">Pricing</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="#" class="site-nav__link">Contact</a>
+            </li>
+            <li class="site-nav__item">
+              <button class="btn btn__login">LOGIN</button>
+            </li>
+          </ul>
+
+          <div class="site-nav__social-links" data-state="closed">
+            <a href="#" class="site-nav__social-link"
+              ><img src="/images/icon-facebook.svg" alt=""
+            /></a>
+            <a href="#" class="site-nav__social-link"
+              ><img src="/images/icon-twitter.svg" alt=""
+            /></a>
+          </div>
+          <!-- </div> -->
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container" data-priority="normal">
+        <section class="hero">
+          <div class="hero__image-box">
+            <img class="hero__image" src="/images/illustration-hero.svg" alt="Illustration hero" />
+            <div class="shape-primary"></div>
+          </div>
+          <div class="hero__text-box">
+            <h1 class="heading-primary">A Simple Bookmark Manager</h1>
+            <p class="hero__description">
+              A clean and simple interface to organize your favourite websites. Open a new browser
+              tab and see your sites load instantly. Try it for free.
+            </p>
+
+            <div class="hero__buttons">
+              <button class="btn btn__hero btn--primary">Get it on Chrome</button>
+              <button class="btn btn__hero btn--secondary">Get it on Firefox</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="features">
+          <!-- <div class="shape--2"></div> -->
+          <div class="features__header">
+            <h2 class="heading-secondary">Features</h2>
+            <p class="features__description">
+              Our aim is to make it quick and easy for you to access your favourite websites. Your
+              bookmarks sync between your devices so you can access them on the go.
+            </p>
+            <ul class="carousel-nav">
+              <li class="carousel-nav__li active"><a href="#" class="carousel-nav__item carousel-nav__item--bookmarking active">Simple Bookmarking</a></li>
+              <li class="carousel-nav__li"><a href="#" class="carousel-nav__item carousel-nav__item--searching">Speedy Searching</a></li>
+              <li class="carousel-nav__li"><a href="#" class="carousel-nav__item carousel-nav__item--sharing">Easy Sharing</a></li>
+            </ul>
+          </div>
+
+
+          <!-- ----------- CAROUSEL ----------- -->
+
+
+          <div class="carousel">
+
+            <div class="carousel__item carousel__item--1">
+              <div class="carousel__img-box">
+                <img
+                  class="carousel__img carousel__img--1"
+                  src="/images/illustration-features-tab-1.svg"
+                  alt="Illustration-1"
+                />
+                <div class="shape-secondary shape-secondary--1"></div>
+              </div>
+              <div class="carousel__info-box">
+                <h3 class="heading-secondary">Bookmark in one click</h3>
+                <p class="carousel__description">
+                  Organize your bookmarks however you like. Our simple drag-and-drop interface gives
+                  you complete control over how you manage your favourite sites.
+                </p>
+                <button class="btn carousel__btn btn--primary">More Info</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="/main.js"></script>
+  </body>
+</html>

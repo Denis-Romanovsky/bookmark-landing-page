@@ -1,0 +1,25 @@
+// Colors
+$clr-primary-700: hsl(231, 69%, 60%);
+$clr-primary-400: hsl(0, 94%, 66%);
+
+$clr-neutral-700: hsl(229, 31%, 21%);
+$clr-neutral-500: hsl(230, 13%, 36%);
+$clr-neutral-400: hsl(229, 8%, 60%);
+$clr-neutral-300: hsl(240, 14%, 89%);
+$clr-neutral-150: hsl(0, 0%, 97%);
+$clr-neutral-100: hsl(0, 0%, 100%);
+
+/*
+
+  600px - 37.5em, 700px - 43.75em
+  800px = 50em, 900px - 56.25em
+  1200px - 75em, 1300px - 81.25em
+  1540px - 96.25em
+
+*/
+
+// Breakpoints
+$bp-sm: 56.25em;
+$bp-md: 1250px;
+$bp-lg: 40rem;
+$bp-xl: 96.25em;

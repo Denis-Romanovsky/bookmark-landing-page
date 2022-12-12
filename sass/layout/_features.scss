@@ -1,0 +1,159 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+
+.features {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  position: relative;
+
+  &__header { @include flex-cl-center-text; }
+
+  &__description {
+    margin-bottom: 3rem;
+
+    @media only screen and (min-width: $bp-sm) {
+      max-width: 50%;
+    }
+  }
+}
+
+.carousel-nav {
+  width: 90%;
+
+  li {
+    border-top: $clr-neutral-300 1px solid;
+    padding-block: 1.25rem;
+
+    &:last-child {
+      border-bottom: $clr-neutral-300 1px solid;
+    }
+
+    @media only screen and (min-width: $bp-sm) {
+      border-top: 0;
+      border-bottom: $clr-neutral-300 1px solid;
+
+      &.active {
+        border-bottom: $clr-primary-400 5px solid;
+      }
+    }
+  }
+
+  &__item,
+  &__item:link,
+  &__item:visited {
+    font-size: $fs-500;
+    color: $clr-neutral-500;
+    padding-block: 1.25rem;
+    letter-spacing: .5px;
+    position: relative;
+
+    &.active { color: $clr-neutral-700; }
+
+    // Line below an item when it's in an active state
+    &.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 5px;
+      width: 85%;
+      background-color: $clr-primary-400;
+
+      @media only screen and (min-width: $bp-sm) {
+        display: none;
+      }
+    }
+
+    &:hover, &:active {
+      color: $clr-primary-400;
+    }
+  }
+
+  @media only screen and (min-width: $bp-sm) {
+    display: grid;
+    grid-template-columns: repeat(3, max(18em));
+    justify-content: center;
+  }
+}
+
+
+.carousel {
+  @include flex-center;
+  margin-top: 6rem;
+
+  &__item {
+    @media only screen and (min-width: $bp-sm) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: clamp(2rem, 8vw, 9rem);
+      align-content: center;
+    }
+
+    &--1 {
+      .carousel__img-box {
+        margin-bottom: 8rem;
+
+        @media only screen and (min-width: $bp-sm) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+
+
+  &__img-box {
+    @include flex-center;
+    position: relative;
+    margin-bottom: 6rem;
+
+    @media only screen and (min-width: $bp-sm) {
+      margin-bottom: 0;
+      justify-content: start;
+      display: block;
+    }
+  }
+
+  &__img {
+    max-width: 90%;
+    max-height: 100%;
+
+    @media only screen and (min-width: $bp-sm) {
+      max-width: 100%;
+    }
+
+    &--3, &--2, &--1 {
+      @media only screen and (min-width: $bp-sm) {
+        height: 416px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__info-box {
+    @include flex-cl-center-text;
+
+    @media only screen and (min-width: $bp-sm) {
+      align-items: start;
+      text-align: left;
+    }
+  }
+
+  &__description {
+
+    @media only screen and (min-width: $bp-sm) {
+      margin-bottom: 2rem;
+      max-width: 38ch;
+    }
+  }
+
+  &__btn {
+    display: none;
+
+    @media only screen and (min-width: $bp-sm) {
+      display: block;
+      padding: calc(1rem - 2px) 1.25rem;
+    }
+  }
+}

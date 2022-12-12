@@ -1,0 +1,54 @@
+/*
+
+FLEX:
+cl - column
+cl-center - column centered (X, Y)
+all - everything centered (X, Y), including text
+
+*/
+
+
+// FLEX ROW
+@mixin flex-center-x {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-center-y {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+// FLEX COLUMN
+@mixin flex-cl-center-x {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flex-cl-center-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin flex-cl-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-cl-center-text {
+  @include flex-cl-center;
+  text-align: center;
+}
+
+

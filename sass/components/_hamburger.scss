@@ -1,0 +1,61 @@
+@use '../abstracts/' as *;
+
+.menu-toggle {
+  cursor: pointer;
+  border: 0;
+  padding: .5rem .25rem;
+  background-color: transparent;
+  z-index: 20;
+
+  // Align hamburger button and navigation items when resizing
+  padding-block: .95rem;
+
+  &[aria-expanded="true"] {
+    // display: none;
+  }
+
+  @media only screen and (min-width: $bp-sm) {
+    display: none;
+  }
+}
+
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  background: #101010;
+  height: 4px;
+  width: min(8vw, 1.35rem);
+  transition: all ease-in-out 250ms;
+}
+
+.hamburger::before {
+  transform: translateY(-7px); // 6px
+}
+
+.hamburger::after {
+  transform: translateY(3px); // 3px
+}
+
+[aria-expanded="true"] .hamburger {
+  transform: rotate(45deg);
+  background: #fff;
+}
+
+[aria-expanded="true"] .hamburger::before {
+  opacity: 0;
+  background: #fff;
+}
+
+[aria-expanded="true"] .hamburger::after {
+  transform: translateY(-4px) rotate(-90deg);
+  background: #fff;
+}
+
+[aria-expanded="true"] .hamburger:hover,
+[aria-expanded="true"] .hamburger:hover::before,
+[aria-expanded="true"] .hamburger:hover::after {
+  background: $clr-primary-400;
+}

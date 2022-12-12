@@ -1,0 +1,132 @@
+@use '../abstracts' as * ;
+@use '../base/typography' as * ;
+
+.site-nav {
+  @include flex-center-y;
+  justify-content: space-between;
+
+  &__primary {
+    &[data-state="opened"] {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      height: 100vh;
+      background-color: hsl(229, 31%, 21%, $alpha: 0.9);
+      overflow: hidden;
+    }
+
+    &[data-state="closed"] {
+      display: none;
+    }
+
+    &[data-state="opened"],
+    &[data-state="closed"] {
+      @media only screen and (min-width: $bp-sm) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        gap: 3rem;
+      }
+    }
+
+    @media only screen and (min-width: $bp-sm) {
+      justify-self: end;
+    }
+  }
+
+  &__item {
+    font-size: $fs-500;
+    padding-block: 1.25rem;
+    text-transform: uppercase;
+    border-top: 1px solid $clr-neutral-500;
+    margin-inline: 2rem;
+
+    &:first-child {
+      margin-top: 6rem;
+
+      @media only screen and (min-width: $bp-sm) {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      border-bottom: 1px solid $clr-neutral-500;
+
+      @media only screen and (min-width: $bp-sm) {
+        border-bottom: 0;
+      }
+    }
+
+    &:last-child {
+      @include flex-center-x;
+      border-top: 0;
+    }
+
+    @media only screen and (min-width: $bp-sm) {
+      padding-block: 0;
+      border-top: 0;
+      margin-inline: 0;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $clr-neutral-100;
+      letter-spacing: 2.5px;
+
+      @media only screen and (min-width: $bp-sm) {
+        font-size: $fs-300;
+        color: $clr-neutral-700;
+        letter-spacing: 1.8px;
+      }
+    }
+
+    &:hover,
+    &:active {
+      color: $clr-primary-400;
+    }
+  }
+
+  &__social-links {
+    display: none; // Has to be hidden because it appears next to navbar
+
+    &[data-state="closed"] {
+      display: none;
+    }
+
+    @media only screen and (min-height: 450px) {
+     @include flex-center-y;
+      gap: 2rem;
+      z-index: 200;
+      position: fixed;
+      bottom: -41%;
+      left: 50%;
+      transform: translateX(-50%); // X, Y
+      height: 100vh;
+    }
+  }
+}
+
+.site-nav__logo {
+  @include flex-center-y;
+  position: relative;
+  width: max(10vw, 80%);
+  z-index: 100;
+}
+
+
+.site-nav__logo[data-color="white"] {
+  --logo-color: white;
+  --logo-color-2: white;
+  --logo-color-3: black;
+}
