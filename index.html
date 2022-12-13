@@ -12,9 +12,24 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="preload" as="image" href="/images/illustration-features-tab-1.svg">
-    <link rel="preload" as="image" href="/images/illustration-features-tab-2.svg">
-    <link rel="preload" as="image" href="/images/illustration-features-tab-3.svg">
+    <link
+      rel="preload"
+      as="image"
+      href="/images/illustration-features-tab-1.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/illustration-features-tab-2.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/illustration-features-tab-3.svg"
+      type="image/svg+xml"
+    />
   </head>
   <body>
     <header class="header">
@@ -33,7 +48,7 @@
           >
             <span class="hamburger" aria-hidden="true"></span>
           </button>
-          <!-- <div class="nav-wrapper"> -->
+
           <ul class="site-nav__primary" data-state="closed">
             <li class="site-nav__item">
               <a href="#" class="site-nav__link">Features</a>
@@ -57,7 +72,6 @@
               ><img src="/images/icon-twitter.svg" alt=""
             /></a>
           </div>
-          <!-- </div> -->
         </nav>
       </div>
     </header>
@@ -71,7 +85,7 @@
           </div>
           <div class="hero__text-box">
             <h1 class="heading-primary">A Simple Bookmark Manager</h1>
-            <p class="hero__description">
+            <p class="hero__text">
               A clean and simple interface to organize your favourite websites. Open a new browser
               tab and see your sites load instantly. Try it for free.
             </p>
@@ -87,23 +101,30 @@
           <!-- <div class="shape--2"></div> -->
           <div class="features__header">
             <h2 class="heading-secondary">Features</h2>
-            <p class="features__description">
+            <p class="features__text">
               Our aim is to make it quick and easy for you to access your favourite websites. Your
               bookmarks sync between your devices so you can access them on the go.
             </p>
             <ul class="carousel-nav">
-              <li class="carousel-nav__li active"><a href="#" class="carousel-nav__item carousel-nav__item--bookmarking active">Simple Bookmarking</a></li>
-              <li class="carousel-nav__li"><a href="#" class="carousel-nav__item carousel-nav__item--searching">Speedy Searching</a></li>
-              <li class="carousel-nav__li"><a href="#" class="carousel-nav__item carousel-nav__item--sharing">Easy Sharing</a></li>
+              <li class="carousel-nav__li active">
+                <a href="#" class="carousel-nav__item carousel-nav__item--bookmarking active"
+                  >Simple Bookmarking</a
+                >
+              </li>
+              <li class="carousel-nav__li">
+                <a href="#" class="carousel-nav__item carousel-nav__item--searching"
+                  >Speedy Searching</a
+                >
+              </li>
+              <li class="carousel-nav__li">
+                <a href="#" class="carousel-nav__item carousel-nav__item--sharing">Easy Sharing</a>
+              </li>
             </ul>
           </div>
 
-
           <!-- ----------- CAROUSEL ----------- -->
 
-
           <div class="carousel">
-
             <div class="carousel__item carousel__item--1">
               <div class="carousel__img-box">
                 <img
@@ -115,13 +136,160 @@
               </div>
               <div class="carousel__info-box">
                 <h3 class="heading-secondary">Bookmark in one click</h3>
-                <p class="carousel__description">
+                <p class="carousel__text">
                   Organize your bookmarks however you like. Our simple drag-and-drop interface gives
                   you complete control over how you manage your favourite sites.
                 </p>
                 <button class="btn carousel__btn btn--primary">More Info</button>
-                </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="extensions">
+          <div class="extensions__header">
+            <h2 class="heading-secondary">Download the extension</h2>
+            <p class="extensions__text">
+              We've got more browsers in the pipeline. Please do let us know if you've got a
+              favourite you'd like us to prioritize.
+            </p>
+          </div>
+
+          <div class="extensions__cards">
+            <div class="card">
+              <div class="card__top">
+                <div class="card__logo-box">
+                  <img class="card__logo" src="/images/logo-chrome.svg" alt="Chrome Browser Logo" />
+                </div>
+                <h3 class="heading-tertiary">Add to Chrome</h3>
+                <p class="card__version">Minimum version 62</p>
+              </div>
+
+              <img class="card__dots" src="/images/bg-dots.svg" alt="Border dots" />
+
+              <div class="card__bottom">
+                <div class="btn card__btn btn--primary">Add & Install Extension</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card__top">
+                <div class="card__logo-box">
+                  <img
+                    class="card__logo"
+                    src="/images/logo-firefox.svg"
+                    alt="Chrome Browser Logo"
+                  />
+                </div>
+                <h3 class="heading-tertiary">Add to Firefox</h3>
+                <p class="card__version">Minimun version 55</p>
+              </div>
+
+              <img class="card__dots" src="/images/bg-dots.svg" alt="Border dots" />
+
+              <div class="card__bottom">
+                <div class="btn card__btn btn--primary">Add & Install Extension</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card__top">
+                <div class="card__logo-box">
+                  <img class="card__logo" src="/images/logo-opera.svg" alt="Chrome Browser Logo" />
+                </div>
+                <h3 class="heading-tertiary">Add to Opera</h3>
+                <p class="card__version">Minimun version 46</p>
+              </div>
+
+              <img class="card__dots" src="/images/bg-dots.svg" alt="Border dots" />
+
+              <div class="card__bottom">
+                <div class="btn card__btn btn--primary">Add & Install Extension</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="faq">
+          <div class="faq__header">
+            <h2 class="heading-secondary">Frequently Asked Questions</h2>
+            <p class="faq__text">
+              Here are some of our FAQs. If you have any other questions you'd like answered please
+              feel free to email us.
+            </p>
+          </div>
+
+          <div class="faq__questions-container">
+            <div class="faq__question-block">
+              <div class="faq__dropdown">
+                <h4 class="faq__question">What is Bookmark?</h4>
+                <button class="btn faq__btn">
+                  <img
+                    class="faq__chevron"
+                    src="/images/chevron-down-outline.svg"
+                    alt="Chevron down icon"
+                  />
+                </button>
+              </div>
+              <p class="faq__answer">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae earum magnam
+                reprehenderit ducimus id. Ut nostrum suscipit fuga amet perspiciatis veritatis
+                eveniet iure, sit aliquid magnam doloribus enim, excepturi voluptatum.
+              </p>
+            </div>
+
+            <div class="faq__question-block">
+              <div class="faq__dropdown">
+                <h4 class="faq__question">How can I request a new browser?</h4>
+                <button class="btn faq__btn">
+                  <img
+                    class="faq__chevron"
+                    src="/images/chevron-down-outline.svg"
+                    alt="Chevron down icon"
+                  />
+                </button>
+              </div>
+              <p class="faq__answer" style="display: block">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae earum magnam
+                reprehenderit ducimus id. Ut nostrum suscipit fuga amet perspiciatis veritatis
+                eveniet iure, sit aliquid magnam doloribus enim, excepturi voluptatum.
+              </p>
+            </div>
+
+            <div class="faq__question-block">
+              <div class="faq__dropdown">
+                <h4 class="faq__question">Is there a mobile app?</h4>
+                <button class="btn faq__btn">
+                  <img
+                    class="faq__chevron"
+                    src="/images/chevron-down-outline.svg"
+                    alt="Chevron down icon"
+                  />
+                </button>
+              </div>
+              <p class="faq__answer">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae earum magnam
+                reprehenderit ducimus id. Ut nostrum suscipit fuga amet perspiciatis veritatis
+                eveniet iure, sit aliquid magnam doloribus enim, excepturi voluptatum.
+              </p>
+            </div>
+
+            <div class="faq__question-block">
+              <div class="faq__dropdown">
+                <h4 class="faq__question">What about other Chromium browsers?</h4>
+                <button class="btn faq__btn">
+                  <img
+                    class="faq__chevron"
+                    src="/images/chevron-down-outline.svg"
+                    alt="Chevron down icon"
+                  />
+                </button>
+              </div>
+              <p class="faq__answer">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae earum magnam
+                reprehenderit ducimus id. Ut nostrum suscipit fuga amet perspiciatis veritatis
+                eveniet iure, sit aliquid magnam doloribus enim, excepturi voluptatum.
+              </p>
             </div>
           </div>
         </section>

@@ -8,10 +8,10 @@
 
   &__header { @include flex-cl-center-text; }
 
-  &__description {
+  &__text {
     margin-bottom: 3rem;
 
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       max-width: 50%;
     }
   }
@@ -28,7 +28,7 @@
       border-bottom: $clr-neutral-300 1px solid;
     }
 
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       border-top: 0;
       border-bottom: $clr-neutral-300 1px solid;
 
@@ -60,7 +60,7 @@
       width: 85%;
       background-color: $clr-primary-400;
 
-      @media only screen and (min-width: $bp-sm) {
+      @include breakpoint(sm) {
         display: none;
       }
     }
@@ -70,7 +70,7 @@
     }
   }
 
-  @media only screen and (min-width: $bp-sm) {
+  @include breakpoint(sm) {
     display: grid;
     grid-template-columns: repeat(3, max(18em));
     justify-content: center;
@@ -80,10 +80,14 @@
 
 .carousel {
   @include flex-center;
-  margin-top: 6rem;
+  margin-top: clamp(4rem, 3vw, 6rem);
+
+  @include breakpoint(sm) {
+    margin-top: 4.5rem;
+  }
 
   &__item {
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: clamp(2rem, 8vw, 9rem);
@@ -94,7 +98,7 @@
       .carousel__img-box {
         margin-bottom: 8rem;
 
-        @media only screen and (min-width: $bp-sm) {
+        @include breakpoint(sm) {
           margin-bottom: 0;
         }
       }
@@ -108,7 +112,7 @@
     position: relative;
     margin-bottom: 6rem;
 
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       margin-bottom: 0;
       justify-content: start;
       display: block;
@@ -119,12 +123,12 @@
     max-width: 90%;
     max-height: 100%;
 
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       max-width: 100%;
     }
 
-    &--3, &--2, &--1 {
-      @media only screen and (min-width: $bp-sm) {
+    &--1, &--2, &--3 {
+      @include breakpoint(sm) {
         height: 416px;
         object-fit: contain;
       }
@@ -134,15 +138,15 @@
   &__info-box {
     @include flex-cl-center-text;
 
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       align-items: start;
       text-align: left;
     }
   }
 
-  &__description {
+  &__text {
 
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       margin-bottom: 2rem;
       max-width: 38ch;
     }
@@ -151,7 +155,7 @@
   &__btn {
     display: none;
 
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       display: block;
       padding: calc(1rem - 2px) 1.25rem;
     }

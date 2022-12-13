@@ -1,0 +1,75 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+
+.faq {
+  margin-top: 6rem;
+
+  &__header {
+    @include flex-cl-center-text;
+    margin-bottom: 2.5rem;
+  }
+
+  &__text {
+    @include breakpoint(sm) {
+      max-width: 50%;
+    }
+  }
+
+
+  &__questions-container {
+    margin: 0 auto;
+
+    @include breakpoint(sm) { max-width: 50%; }
+  }
+
+  &__question-block {
+
+    @include breakpoint(sm) {
+      &:first-child > .faq__dropdown{
+        border-top: $clr-neutral-300 1px solid;
+      }
+    }
+  }
+
+  &__dropdown{
+    @include flex-center-y;
+    justify-content: space-between;
+    padding-block: 1rem;
+    // border-top: $clr-neutral-300 1px solid;
+    border-bottom: $clr-neutral-300 1px solid;
+    flex-wrap: wrap;
+    cursor: pointer;
+  }
+
+  &__question {
+    color: $clr-neutral-700;
+    font-size: clamp($fs-350, 2.5vw , $fs-500);
+    flex-basis: 85%;
+  }
+
+  &__btn {
+    @include flex-center;
+    background-color: transparent;
+    box-shadow: none;
+    flex-basis: 5%;
+
+    @include breakpoint(sm) { margin-right: 1rem; }
+  }
+
+  &__answer {
+    padding: 1.5rem 0 1rem 0;
+  }
+
+
+
+  &__chevron {
+    width: 30px;
+    height: 10%;
+    fill: $clr-primary-400;
+    stroke: $clr-primary-400;
+  }
+
+  &__answer {
+    display: none;
+  }
+}

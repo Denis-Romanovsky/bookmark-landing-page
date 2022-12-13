@@ -13,7 +13,7 @@
     position: relative;
 
 
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       align-items: normal;
       justify-content: normal;
       margin-right: -2rem; // Fixes white space
@@ -38,17 +38,17 @@
     @include flex-cl-center-text;
     margin-top: 4rem;
 
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       margin-top: 0;
       text-align: left;
       align-items: start;
     }
   }
 
-  &__description {
+  &__text {
     margin-bottom: 2rem;
 
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       max-width: 45ch;
       padding-inline: 0;
     }
@@ -59,12 +59,12 @@
     flex-wrap: wrap;
     gap: 1.25rem;
 
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       align-self: start;
     }
   }
 
-  @media only screen and (min-width: $bp-sm) {
+  @include breakpoint(sm) {
     grid-template-columns: 1fr 1fr;
     column-gap: 1.5rem;
 

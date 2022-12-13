@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 /*
 
 FLEX:
@@ -6,6 +8,45 @@ cl-center - column centered (X, Y)
 all - everything centered (X, Y), including text
 
 */
+
+@mixin breakpoint($point) {
+
+  @if $point == xsm {
+    @media screen and (min-width: $bp-xsm) {
+      @content;
+    }
+  }
+  @else if $point == sm {
+    @media screen and (min-width: $bp-sm) {
+      @content;
+    }
+  }
+  @else if $point == md {
+    @media screen and (min-width: $bp-md) {
+      @content;
+    }
+  }
+  @else if $point == lg {
+    @media screen and (min-width: $bp-lg) {
+      @content;
+    }
+  }
+  @else if $point == xl {
+    @media screen and (min-width: $bp-xl) {
+      @content;
+    }
+  }
+  @else if $point == xxl {
+    @media screen and (min-width: $bp-xxl) {
+      @content;
+    }
+  }
+  @else {
+    @media screen and (min-width: '#{$point}') {
+      @content
+    }
+  }
+}
 
 
 // FLEX ROW

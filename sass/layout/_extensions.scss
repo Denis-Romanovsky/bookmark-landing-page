@@ -1,0 +1,40 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+
+.extensions {
+  text-align: center;
+  margin-top: 5rem;
+
+  &__header {
+    margin-bottom: 4rem;
+    @include flex-cl-center;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: minmax(2rem, 20rem);
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(3, minmax(2rem, 20rem));
+      column-gap: 2.5rem;
+      align-items: start;
+
+      >.card {
+        &:nth-child(2) {
+          margin-top: 2.5rem;
+        }
+
+        &:nth-child(3) {
+          margin-top: 5rem;
+        }
+      }
+    }
+  }
+
+  &__text {
+    @include breakpoint(sm) { max-width: 50%; }
+  }
+}
+

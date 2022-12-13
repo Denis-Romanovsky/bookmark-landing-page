@@ -26,7 +26,7 @@
 
     &[data-state="opened"],
     &[data-state="closed"] {
-      @media only screen and (min-width: $bp-sm) {
+      @include breakpoint(sm) {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -38,7 +38,7 @@
       }
     }
 
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       justify-self: end;
     }
   }
@@ -53,7 +53,7 @@
     &:first-child {
       margin-top: 6rem;
 
-      @media only screen and (min-width: $bp-sm) {
+      @include breakpoint(sm) {
         margin-top: 0;
       }
     }
@@ -61,7 +61,7 @@
     &:nth-child(3) {
       border-bottom: 1px solid $clr-neutral-500;
 
-      @media only screen and (min-width: $bp-sm) {
+      @include breakpoint(sm) {
         border-bottom: 0;
       }
     }
@@ -71,7 +71,7 @@
       border-top: 0;
     }
 
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       padding-block: 0;
       border-top: 0;
       margin-inline: 0;
@@ -84,7 +84,7 @@
       color: $clr-neutral-100;
       letter-spacing: 2.5px;
 
-      @media only screen and (min-width: $bp-sm) {
+      @include breakpoint(sm) {
         font-size: $fs-300;
         color: $clr-neutral-700;
         letter-spacing: 1.8px;

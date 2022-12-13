@@ -1,12 +1,19 @@
+// Mobile Hamburger Menu
 const test = document.querySelector('.site-nav__logo');
 const menuToggle = document.querySelector('.menu-toggle');
 const btnHamburger = document.querySelector('.btn-hamburger');
 const ulMenu = document.querySelector('.site-nav__primary');
 const socialLinks = document.querySelector('.site-nav__social-links');
+
+// Carousel Section
 const carousel = document.querySelector('.carousel');
 const carouselNav = document.querySelector('.carousel-nav');
 const carouselNavItem = document.querySelectorAll('.carousel-nav__item');
 const carouselNavLi = document.querySelectorAll('.carousel-nav__li');
+
+// FAQ Section
+const faqDropdown = document.querySelectorAll('.faq__dropdown');
+const faqAnswer = document.querySelector('.faq__answer');
 
 
 menuToggle.addEventListener('click', () => {
@@ -94,9 +101,7 @@ carouselNav.addEventListener('click', e => {
       cur.parentElement.classList.add('active');
 
       // Get index of an active class
-      console.log(typeof carouselNav);
       const lis = carouselNav.children;
-      console.log(lis);
 
       for (let i = 0; i < lis.length; i++) {
         if (lis[i].classList.contains('active')) {
@@ -123,7 +128,7 @@ carouselNav.addEventListener('click', e => {
               </div>
               <div class="carousel__info-box">
                 <h3 class="heading-secondary">${itemData['heading']}</h3>
-                <p class="carousel__description">
+                <p class="carousel__text">
                   ${itemData['description']}
                 </p>
                 <button class="btn carousel__btn btn--primary">More Info</button>

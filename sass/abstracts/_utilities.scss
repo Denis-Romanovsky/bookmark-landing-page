@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 @use '../base/typography' as *;
 
 @mixin heading-properties {
@@ -12,24 +13,26 @@
   font-size: clamp(1.95rem, 5vw, 3rem);
   line-height: 1.35;
 
-  @media only screen and (min-width: $bp-sm) {
+  @include breakpoint(sm) {
     line-height: 1.05;
   }
 }
 
 .heading-secondary {
   @include heading-properties();
-  font-size: 1.95rem; // 1.75rem
-  font-size: clamp(1.75rem, 5vw, 1.95rem);
-  margin-bottom: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1.5rem, 4vw, 1.95rem); // 5vw
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.25;
   text-align: center;
 }
 
-.active {
-  // transform: translateY(-22px);
-  // border-bottom: $clr-primary-400 3px solid;
+.heading-tertiary {
+  @include heading-properties();
+  font-size: 1.25rem;
+  // margin-bottom: clamp(1rem, 2vw, 2rem);
+  margin-bottom: .75rem;
+  text-align: center;
 }
-
 
 .shape-primary {
   position: absolute !important;
@@ -40,10 +43,9 @@
   height: 79%;
   background-color: $clr-primary-700;
 
-  @media only screen and (min-width: $bp-sm) {
+  @include breakpoint(sm) {
     top: 30%;
     left: 30%;
-    // width: 100vw; //
     width: 1000px; // 80vw
     height: 75%;
     border-bottom-left-radius: 10vw;
@@ -64,14 +66,14 @@
     height: 100%;
 
 
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       top: 8em; // 25%
       right: 15%;
       height: 78%;
       height: 25vw;
     }
 
-    @media only screen and (min-width: $bp-md) {
+    @include breakpoint(md) {
       height: 78%;
     }
   }
@@ -81,14 +83,14 @@
     right: 30%;
     height: 90%;
 
-    @media only screen and (min-width: $bp-sm) {
+    @include breakpoint(sm) {
       top: 5em;
       right: 20%;
       height: 90%;
       height: 32vw;
     }
 
-    @media only screen and (min-width: $bp-md) {
+    @include breakpoint(md) {
       height: 90%;
     }
   }

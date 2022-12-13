@@ -1,0 +1,38 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  box-shadow: 0 6px 12px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5rem;
+  border-radius: 10px;
+
+  &__top {
+    padding: 1.5rem 2rem;
+  }
+
+  &__logo-box {
+    padding-block: 2rem;
+    max-width: 100%;
+  }
+
+  &__logo {
+    max-width: 100%;
+  }
+
+  &__version {
+    margin-bottom: .75rem; // .5rem
+    font-size: $fs-350;
+  }
+
+  &__bottom {
+    padding: 1.5rem 2rem;
+  }
+
+  &__btn {
+    padding: .75rem min(.5rem, 2.5rem);
+  }
+}

@@ -10,9 +10,9 @@
   // Align hamburger button and navigation items when resizing
   padding-block: .95rem;
 
-  &[aria-expanded="true"] {
-    // display: none;
-  }
+  // &[aria-expanded="true"] {
+
+  // }
 
   @media only screen and (min-width: $bp-sm) {
     display: none;
